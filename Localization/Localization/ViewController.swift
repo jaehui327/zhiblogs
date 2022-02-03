@@ -31,6 +31,11 @@ class ViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        
+        let identifier = Locale.current.identifier
+        guard let regionCode = Locale.current.regionCode else { return }
+        guard let languageCode = Locale.current.languageCode else { return }
+        print("identifier: \(identifier), regionCode: \(regionCode), languageCode: \(languageCode)")
     }
 }
 
